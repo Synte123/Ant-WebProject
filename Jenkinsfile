@@ -10,6 +10,9 @@ try{
         /*stage('build'){
         sh 'ant -f build-mt.xml'
     }*/
+        stage('sonar'){
+        bat 'sonar-scanner'
+    }
     
     stage('Email'){
      body_msg = ''' Jenkins Job success 
